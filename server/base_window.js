@@ -8,6 +8,11 @@ function BaseWindow (options) {
   var self = this
   EventEmitter.call(this)
   this.window = new BrowserWindow({resizable: options.resizable, show: false, frame: options.frame || false, width: options.width, height: options.height, y: options.top, x: options.left})
+
+  if (process.env.LIMELIGHT_DEBUG) {
+    this.window.openDevTools();
+  }
+  
   this.window.setVisibleOnAllWorkspaces(true)
   if (options.navigation) this._navigation = Menu.buildFromTemplate(require(options.navigation)(this.window))
 

@@ -50,10 +50,16 @@ Application.prototype.start = function (callback) {
 }
 
 Application.prototype.showDockIcon = function () {
+  if (!app.dock) {
+    return
+  }
   app.dock.show()
 }
 
 Application.prototype.hideDockIcon = function () {
+  if (!app.dock) {
+    return
+  }
   app.dock.hide()
 }
 

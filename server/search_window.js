@@ -112,6 +112,9 @@ function updateBounds () {
 }
 
 function ensureAppearance () {
+  if (process.platform !== 'darwin') {
+    return
+  }
   require('dark-mode').isDark(function (err, isDark) {
     if (err) return console.error(err)
 

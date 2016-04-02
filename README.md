@@ -8,3 +8,17 @@ This project is in a very early stage, only a few things work.
 ![image](docs/emoji.png)
 ![image](docs/github-issue.png)
 ![image](docs/weather.png)
+
+## Install
+
+```
+$ npm install
+$ node_modules/.bin/bower install
+```
+
+## Usage
+
+```
+$ npm start
+$ LIMELIGHT_DEBUG=true npm start # with devtools
+```
